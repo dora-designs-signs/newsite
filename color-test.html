@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color System Test - CFL Machine</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .color-test-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            padding: 3rem 0;
+        }
+        .color-swatch {
+            padding: 3rem 2rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .color-swatch h3 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        .color-swatch code {
+            font-size: 0.875rem;
+            opacity: 0.9;
+        }
+        .swatch-primary { background: var(--color-primary); color: white; }
+        .swatch-primary-dark { background: var(--color-primary-dark); color: white; }
+        .swatch-secondary { background: var(--color-secondary); color: white; }
+        .swatch-secondary-dark { background: var(--color-secondary-dark); color: white; }
+        .swatch-hero-start { background: var(--color-hero-start); color: white; }
+        .swatch-hero-end { background: var(--color-hero-end); color: white; }
+        .component-demo {
+            margin: 3rem 0;
+            padding: 2rem;
+            background: #f8f8f8;
+            border-radius: 8px;
+        }
+        .demo-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <main class="main" style="margin-top: 80px;">
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-header__title">🎨 Color System Test Page</h1>
+                <p class="page-header__subtitle">Preview your brand colors in action</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section__title">Main Brand Colors</h2>
+                <p class="section__subtitle">Change these two values in <code>css/styles.css</code> (lines 4-5) to update the entire website</p>
+
+                <div class="color-test-grid">
+                    <div class="color-swatch swatch-primary">
+                        <h3>Primary Color</h3>
+                        <code>--color-primary</code>
+                        <p style="margin-top: 1rem; font-size: 0.875rem;">Used for buttons, CTAs, accents</p>
+                    </div>
+                    <div class="color-swatch swatch-primary-dark">
+                        <h3>Primary Dark</h3>
+                        <code>--color-primary-dark</code>
+                        <p style="margin-top: 1rem; font-size: 0.875rem;">Hover states</p>
+                    </div>
+                    <div class="color-swatch swatch-secondary">
+                        <h3>Secondary Color</h3>
+                        <code>--color-secondary</code>
+                        <p style="margin-top: 1rem; font-size: 0.875rem;">Headers, dark sections</p>
+                    </div>
+                    <div class="color-swatch swatch-secondary-dark">
+                        <h3>Secondary Dark</h3>
+                        <code>--color-secondary-dark</code>
+                        <p style="margin-top: 1rem; font-size: 0.875rem;">Gradients, footer</p>
+                    </div>
+                    <div class="color-swatch swatch-hero-start">
+                        <h3>Hero Gradient Start</h3>
+                        <code>--color-hero-start</code>
+                        <p style="margin-top: 1rem; font-size: 0.875rem;">Page headers</p>
+                    </div>
+                    <div class="color-swatch swatch-hero-end">
+                        <h3>Hero Gradient End</h3>
+                        <code>--color-hero-end</code>
+                        <p style="margin-top: 1rem; font-size: 0.875rem;">Page headers</p>
+                    </div>
+                </div>
+
+                <div class="component-demo">
+                    <h3>Component Preview</h3>
+                    <div class="demo-buttons">
+                        <a href="#" class="btn btn--primary">Primary Button</a>
+                        <a href="#" class="btn btn--secondary">Secondary Button</a>
+                        <a href="#" class="btn btn--primary btn--large">Large Button</a>
+                    </div>
+                </div>
+
+                <div class="component-demo">
+                    <h3>Service Card Preview</h3>
+                    <div class="services-grid" style="max-width: 800px;">
+                        <div class="service-card">
+                            <h3>Test Service</h3>
+                            <p>This card uses your color scheme for borders and hover effects.</p>
+                        </div>
+                        <div class="service-card">
+                            <h3>Another Service</h3>
+                            <p>Hover over these cards to see the shadow effects.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="background: white; padding: 2rem; border-radius: 8px; margin-top: 2rem;">
+                    <h3>How to Change Colors</h3>
+                    <ol style="line-height: 2;">
+                        <li>Open <code>css/styles.css</code></li>
+                        <li>Find lines 4-5 (the two main color variables)</li>
+                        <li>Change <code>--color-primary</code> and <code>--color-secondary</code> to your hex colors</li>
+                        <li>Save and refresh your browser (Ctrl+F5)</li>
+                        <li>The entire website updates instantly!</li>
+                    </ol>
+                    <p><strong>See <code>COLOR_SYSTEM_GUIDE.md</code> for example color schemes and detailed instructions.</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="final-cta section section--dark">
+            <div class="container">
+                <div class="final-cta__content">
+                    <h2 class="final-cta__title">Dark Section Example</h2>
+                    <p class="final-cta__subtitle">This section uses the secondary color gradient</p>
+                    <div class="final-cta__buttons">
+                        <a href="#" class="btn btn--primary btn--large">Primary CTA</a>
+                        <a href="#" class="btn btn--secondary btn--large">Secondary CTA</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

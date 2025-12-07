@@ -1,6 +1,6 @@
 /* ==================== FORM STYLES ==================== */
 .page-header {
-    background: linear-gradient(135deg, var(--color-secondary) 0%, #2168af 100%);
+    background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-hero-end) 100%);
     color: var(--color-text-light);
     padding: 3.5rem 0 2rem;
     text-align: center;
@@ -88,7 +88,7 @@
     padding: 3rem 2.5rem;
     border-radius: 6px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.08);
-    border: 1px solid #e8e8e8;
+    border: 1px solid var(--color-border-light);
 }
 
 .contact-form {
@@ -154,7 +154,7 @@
 .form-group input.error,
 .form-group select.error,
 .form-group textarea.error {
-    border-color: #e74c3c;
+    border-color: var(--color-error-text);
 }
 
 .form-group textarea {
@@ -228,14 +228,14 @@
 }
 
 .file-item__remove {
-    color: #e74c3c;
+    color: var(--color-error-text);
     cursor: pointer;
     font-weight: 600;
     transition: var(--transition-base);
 }
 
 .file-item__remove:hover {
-    color: #c0392b;
+    color: var(--color-error-hover);
 }
 
 /* Form Actions */
@@ -252,11 +252,11 @@
 
 /* Success Message */
 .form-success {
-    background-color: #d4edda;
-    color: #155724;
+    background-color: var(--color-success-bg);
+    color: var(--color-success);
     padding: 1.25rem 1.5rem;
     border-radius: var(--radius-sm);
-    border: 1px solid #c3e6cb;
+    border: 1px solid var(--color-success-border);
     margin-bottom: 2rem;
     display: none;
 }
@@ -266,11 +266,11 @@
 }
 
 .form-error {
-    background-color: #f8d7da;
-    color: #721c24;
+    background-color: var(--color-error-bg);
+    color: var(--color-error);
     padding: 1.25rem 1.5rem;
     border-radius: var(--radius-sm);
-    border: 1px solid #f5c6cb;
+    border: 1px solid var(--color-error-border);
     margin-bottom: 2rem;
     display: none;
 }
@@ -292,7 +292,7 @@
     padding: 2.5rem 2rem;
     border-radius: 6px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.08);
-    border: 1px solid #e8e8e8;
+    border: 1px solid var(--color-border-light);
     text-align: center;
     transition: all 0.25s ease;
 }

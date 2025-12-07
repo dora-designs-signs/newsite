@@ -1,17 +1,44 @@
 /* ==================== ROOT VARIABLES ==================== */
 :root {
-    /* Colors - MetPlas Style */
-    --color-primary: #D42E12;
-    --color-primary-dark: #B02510;
-    --color-primary-light: #E85540;
-    --color-secondary: #2C3E50;
+    /* ========== MAIN BRAND COLORS (CHANGE THESE TWO TO UPDATE ENTIRE SITE) ========== */
+    --color-primary: #D42E12;           /* Primary brand color (buttons, accents, CTAs) */
+    --color-secondary:  rgba(13, 34, 73, 0.9) ;         /* Secondary brand color (headers, dark sections) */
+
+    /* ========== DERIVED COLORS (Auto-calculated from primary/secondary) ========== */
+    /* Primary Variations */
+    --color-primary-dark: #B02510;      /* Darker primary for hover states */
+    --color-primary-light: #E85540;     /* Lighter primary for backgrounds */
+    --color-primary-rgba: 212, 46, 18;  /* RGB values for alpha transparency */
+
+    /* Secondary Variations */
+    --color-secondary-light:  rgba(42, 82, 152, 0.9);    /* Darker secondary for gradients */
+    --color-secondary-dark: rgba(25, 65, 139, 0.9);   /* Lighter secondary */
+
+    /* Hero Gradient Colors (based on secondary) */
+    --color-hero-start: rgba(25, 65, 139, 0.9);   /* Blue gradient start */
+    --color-hero-end: rgba(42, 82, 152, 0.9);     /* Blue gradient end */
+
+    /* Neutral Colors */
     --color-text-primary: #1A1A1A;
     --color-text-secondary: #6B6B6B;
     --color-text-light: #FFFFFF;
     --color-background: #FFFFFF;
     --color-background-gray: #F5F5F5;
+    --color-background-dark: var(--color-background-dark);
     --color-border: #E0E0E0;
+    --color-border-light: var(--color-border-light);
+    --color-border-lighter: var(--color-border-lighter);
     --color-shadow: rgba(0, 0, 0, 0.1);
+
+    /* Status Colors */
+    --color-success: #155724;
+    --color-success-bg: #d4edda;
+    --color-success-border: #c3e6cb;
+    --color-error: #721c24;
+    --color-error-bg: #f8d7da;
+    --color-error-border: #f5c6cb;
+    --color-error-text: #e74c3c;
+    --color-error-hover: #c0392b;
 
     /* Typography */
     --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -159,7 +186,7 @@ button {
     padding: 0.5rem 0;
     position: relative;
     transition: color 0.2s ease;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .nav__link:hover,
@@ -229,7 +256,6 @@ button {
     display: flex;
     align-items: center;
     gap: 1rem;
-    margin-bottom: 2rem;
 }
 
 /* Mobile Menu */
@@ -318,7 +344,7 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, rgba(30, 60, 114, 0.9) 0%, rgba(42, 82, 152, 0.9) 100%),
+    background: linear-gradient(135deg, var(--color-hero-start) 0%, var(--color-hero-end) 100%),
                 url('../images/super.jpg') center/cover no-repeat;
     color: var(--color-text-light);
     overflow: hidden;
@@ -347,7 +373,7 @@ button {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color:linear-gradient(135deg, var(--color-secondary) 0%, #2168af 100%);
+    background-color:linear-gradient(135deg, var(--color-secondary) 0%, var(--color-hero-end) 100%);
     z-index: 1;
 }
 
@@ -453,7 +479,7 @@ button {
 
 /* ==================== PAGE HEADER (SUBPAGES) ==================== */
 .page-header {
-    background: linear-gradient(135deg, var(--color-secondary) 0%, #2168af 100%);
+    background: linear-gradient(135deg, var(--color-hero-start) 0%, var(--color-hero-end) 100%);
     color: var(--color-text-light);
     padding: 3rem 0 2rem;
     text-align: center;
@@ -508,9 +534,9 @@ button {
     background-color: var(--color-background);
     border-radius: var(--radius-sm);
     padding: 2.5rem 2rem;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.08);
+    box-shadow: var(--shadow-card);
     transition: all 0.25s ease;
-    border: 1px solid #e8e8e8;
+    border: 1px solid var(--color-border-light);
     position: relative;
     overflow: hidden;
 }
@@ -714,7 +740,7 @@ button {
 
 /* ==================== FINAL CTA SECTION ==================== */
 .section--dark {
-    background: linear-gradient(135deg, #2C3E50 0%, #1a252f 100%);
+    background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-secondary-dark) 100%);
     color: var(--color-text-light);
 }
 
@@ -788,7 +814,7 @@ button {
     position: relative;
     color: var(--color-text-secondary);
     line-height: 1.7;
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 1px solid var(--color-border-lighter);
 }
 
 .material-category ul li:last-child {
@@ -1169,7 +1195,7 @@ button {
 
 /* ==================== CTA SECTION ==================== */
 .cta-box {
-    background: linear-gradient(135deg, #2C3E50 0%, #1a252f 100%);
+    background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-secondary-dark) 100%);
     color: var(--color-text-light);
     padding: 4rem 3rem;
     border-radius: 8px;
@@ -1586,7 +1612,7 @@ button {
     border-radius: 6px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.08);
     transition: all 0.25s ease;
-    border: 1px solid #e8e8e8;
+    border: 1px solid var(--color-border-light);
 }
 
 .content-card:hover {
@@ -1650,7 +1676,7 @@ button {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem;
     padding: 3rem;
-    background: linear-gradient(135deg, var(--color-secondary) 0%, #2168af 100%);
+    background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-hero-end) 100%);
     border-radius: var(--radius-lg);
     margin: 3rem 0;
 }
@@ -1696,7 +1722,7 @@ button {
 }
 
 .enhanced-list li:hover {
-    background: #EBEBEB;
+    background: var(--color-background-dark);
     transform: translateX(4px);
 }
 
