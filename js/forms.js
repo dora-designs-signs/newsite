@@ -139,7 +139,7 @@ function handleQuoteSubmit(e) {
     // Try to open email client
     try {
         window.location.href = mailto;
-        
+
         // Show success message after a brief delay
         setTimeout(() => {
             showSuccess('Your email client should open shortly with the quote request. Please send the email to complete your submission.' + (uploadedFiles.length > 0 ? ' Remember to attach your files.' : ''));
@@ -185,7 +185,7 @@ function handleContactSubmit(e) {
     // Try to open email client
     try {
         window.location.href = mailto;
-        
+
         // Show success message
         setTimeout(() => {
             showSuccess('Your email client should open shortly. Please send the email to complete your message.');

@@ -239,6 +239,7 @@ button {
     display: flex;
     align-items: center;
     gap: 1rem;
+    margin-bottom: 2rem;
 }
 
 /* Mobile Menu */
@@ -266,6 +267,11 @@ button {
     text-align: center;
     cursor: pointer;
     border: 2px solid transparent;
+}
+
+/* Main content spacing to account for fixed header */
+.main {
+    margin-top: 70px;
 }
 
 .btn--primary {
@@ -320,7 +326,6 @@ button {
     background: linear-gradient(135deg, rgba(30, 60, 114, 0.9) 0%, rgba(42, 82, 152, 0.9) 50%, rgba(126, 139, 163, 0.9) 100%),
                 url('../images/super.jpg') center/cover no-repeat;
     color: var(--color-text-light);
-    margin-top: 70px;
     overflow: hidden;
 }
 
@@ -441,6 +446,25 @@ button {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* ==================== PAGE HEADER (SUBPAGES) ==================== */
+.page-header {
+    background: linear-gradient(135deg, var(--color-secondary) 0%, #34495e 100%);
+    color: var(--color-text-light);
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+
+.page-header__title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.page-header__subtitle {
+    font-size: 1.25rem;
+    opacity: 0.9;
 }
 
 /* ==================== SECTION HEADERS ==================== */
@@ -1047,6 +1071,11 @@ button {
         overflow-y: auto;
     }
 
+    /* Add extra spacing on mobile for fixed header */
+    .main {
+        margin-top: 120px;
+    }
+
     .nav__menu.show-menu {
         right: 0;
     }
@@ -1097,6 +1126,11 @@ button {
 
     .nav__actions .btn {
         display: none;
+    }
+
+    /* Page Header - Extra padding on mobile */
+    .page-header {
+        padding: 4rem 0 2rem;
     }
 
     /* Hero */
