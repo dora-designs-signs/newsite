@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Request a quote for precision CNC machining and routing services for electrical components. Fast turnaround, competitive pricing.">
+    <title>Request a Quote | CFL Machine</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header (same as index.html) -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav__logo">
+                <span class="logo-text">CFL Machine</span>
+            </a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                    <li class="nav__item nav__dropdown">
+                        <a href="services.html" class="nav__link">Services <span class="dropdown-arrow">▾</span></a>
+                        <ul class="nav__dropdown-menu">
+                            <li><a href="cnc-routing.html">CNC Routing & Machining</a></li>
+                            <li><a href="electrical-components.html">Electrical Components</a></li>
+                            <li><a href="custom-fabrication.html">Custom Fabrication</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__item"><a href="materials.html" class="nav__link">Materials</a></li>
+                    <li class="nav__item"><a href="quality.html" class="nav__link">Quality</a></li>
+                    <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
+                </ul>
+                <div class="nav__close" id="nav-close"><i class="close-icon">✕</i></div>
+            </div>
+            <div class="nav__actions">
+                <a href="quote.html" class="btn btn--primary">Request Quote</a>
+                <div class="nav__toggle" id="nav-toggle">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-header__title">Request a Quote</h1>
+                <p class="page-header__subtitle">Get a detailed quote for your project in 24-48 hours</p>
+            </div>
+        </section>
+
+        <!-- Quote Form -->
+        <section class="quote-form section">
+            <div class="container">
+                <div class="form-layout">
+                    <div class="form-sidebar">
+                        <h2>What to Include</h2>
+                        <ul class="info-list">
+                            <li>
+                                <strong>Technical Drawings:</strong>
+                                <p>CAD files (DXF, DWG, PDF) or technical specifications</p>
+                            </li>
+                            <li>
+                                <strong>Material Requirements:</strong>
+                                <p>Specify material type, grade, and thickness</p>
+                            </li>
+                            <li>
+                                <strong>Quantities:</strong>
+                                <p>Estimated quantity needed (prototype vs production)</p>
+                            </li>
+                            <li>
+                                <strong>Timeline:</strong>
+                                <p>When do you need the parts?</p>
+                            </li>
+                            <li>
+                                <strong>Special Requirements:</strong>
+                                <p>Tolerances, finishes, packaging, etc.</p>
+                            </li>
+                        </ul>
+
+                        <div class="contact-info-box">
+                            <h3>Need Help?</h3>
+                            <p>Our team is ready to assist with your project.</p>
+                            <p><strong>Phone:</strong> 321-274-7872</p>
+                            <p><strong>Email:</strong> JonW@CFLmachine.com</p>
+                        </div>
+                    </div>
+
+                    <div class="form-main">
+                        <form id="quote-form" class="contact-form" action="#" method="POST" enctype="multipart/form-data">
+                            <div class="form-section">
+                                <h3 class="form-section__title">Contact Information</h3>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="first-name">First Name *</label>
+                                        <input type="text" id="first-name" name="first-name" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="last-name">Last Name *</label>
+                                        <input type="text" id="last-name" name="last-name" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="company">Company Name *</label>
+                                        <input type="text" id="company" name="company" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phone">Phone *</label>
+                                        <input type="tel" id="phone" name="phone" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email">Email Address *</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                            </div>
+
+                            <div class="form-section">
+                                <h3 class="form-section__title">Project Details</h3>
+
+                                <div class="form-group">
+                                    <label for="project-type">Project Type *</label>
+                                    <select id="project-type" name="project-type" required>
+                                        <option value="">Select...</option>
+                                        <option value="cnc-routing">CNC Routing</option>
+                                        <option value="precision-machining">Precision Machining</option>
+                                        <option value="electrical-components">Electrical Components</option>
+                                        <option value="custom-fabrication">Custom Fabrication</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="material">Material</label>
+                                        <select id="material" name="material">
+                                            <option value="">Select material...</option>
+                                            <optgroup label="Electrical Insulation">
+                                                <option value="gpo-1">GPO-1 (Polyester GPO)</option>
+                                                <option value="gpo-2">GPO-2 (Polyester GPO)</option>
+                                                <option value="gpo-3">GPO-3 (Polyester GPO)</option>
+                                                <option value="g10-fr4">G-10/FR-4 (Epoxy Glass)</option>
+                                                <option value="g7">G-7 (Glass Silicone)</option>
+                                                <option value="g11">G-11 (High Temp Epoxy)</option>
+                                                <option value="vulcanized-fiber">Vulcanized Fiber</option>
+                                                <option value="phenolic">Phenolic Laminate</option>
+                                            </optgroup>
+                                            <optgroup label="Metals">
+                                                <option value="aluminum">Aluminum</option>
+                                                <option value="brass">Brass</option>
+                                                <option value="copper">Copper</option>
+                                                <option value="steel">Steel (Carbon/Stainless)</option>
+                                            </optgroup>
+                                            <optgroup label="Plastics">
+                                                <option value="acrylic">Acrylic (PMMA)</option>
+                                                <option value="polycarbonate">Polycarbonate (PC)</option>
+                                                <option value="abs">ABS</option>
+                                                <option value="delrin">Delrin (Acetal)</option>
+                                                <option value="hdpe">HDPE</option>
+                                                <option value="pvc">PVC</option>
+                                            </optgroup>
+                                            <optgroup label="Composites">
+                                                <option value="fiberglass">Fiberglass</option>
+                                                <option value="carbon-fiber">Carbon Fiber</option>
+                                            </optgroup>
+                                            <option value="other">Other (specify in description)</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="quantity">Quantity</label>
+                                        <input type="text" id="quantity" name="quantity" placeholder="e.g., 100 pieces">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="timeline">Requested Delivery</label>
+                                    <select id="timeline" name="timeline">
+                                        <option value="">Select timeline...</option>
+                                        <option value="rush">Rush (1-2 weeks)</option>
+                                        <option value="standard">Standard (2-4 weeks)</option>
+                                        <option value="flexible">Flexible (4+ weeks)</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="description">Project Description *</label>
+                                    <textarea id="description" name="description" rows="5" required placeholder="Please describe your project, including any specific tolerances, finishes, or special requirements..."></textarea>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="file-upload">Upload Files (Optional)</label>
+                                    <div class="file-upload-wrapper">
+                                        <input type="file" id="file-upload" name="files[]" multiple accept=".pdf,.dxf,.dwg,.jpg,.png,.doc,.docx">
+                                        <label for="file-upload" class="file-upload-label">
+                                            <span class="file-upload-icon">📁</span>
+                                            <span class="file-upload-text">Click to upload or drag and drop</span>
+                                            <span class="file-upload-hint">PDF, DXF, DWG, images (Max 10MB)</span>
+                                        </label>
+                                    </div>
+                                    <div id="file-list" class="file-list"></div>
+                                </div>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn--primary btn--large">Submit Quote Request</button>
+                                <p class="form-note">We'll review your request and respond within 24-48 hours</p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__column">
+                    <div class="footer__logo"><span class="logo-text">CFL Machine</span></div>
+                    <p class="footer__description">Precision CNC machining and routing specialists for electrical insulation components.</p>
+                    <div class="footer__contact">
+                        <p><strong>Phone:</strong> 321-274-7872</p>
+                        <p><strong>Email:</strong> JonW@CFLmachine.com</p>
+                    </div>
+                </div>
+                <div class="footer__column">
+                    <h4 class="footer__title">Quick Links</h4>
+                    <ul class="footer__links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="materials.html">Materials</a></li>
+                        <li><a href="quality.html">Quality</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom"><p>&copy; 2025 CFL Machine. All rights reserved.</p></div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/forms.js"></script>
+</body>
+</html>
