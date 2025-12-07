@@ -10,18 +10,53 @@
 <body>
     <header class="header" id="header">
         <nav class="nav container">
-            <a href="index.html" class="nav__logo"><span class="logo-text">CFL Machine</span></a>
+            <a href="index.html" class="nav__logo">
+                <span class="logo-text">CFL Machine</span>
+            </a>
+
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
-                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
-                    <li class="nav__item"><a href="services.html" class="nav__link active">Services</a></li>
-                    <li class="nav__item"><a href="materials.html" class="nav__link">Materials</a></li>
-                    <li class="nav__item"><a href="quality.html" class="nav__link">Quality</a></li>
-                    <li class="nav__item"><a href="about.html" class="nav__link">About</a></li>
-                    <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link">Home</a>
+                    </li>
+                    <li class="nav__item nav__dropdown">
+                        <a href="services.html" class="nav__link active">
+                            Services <span class="dropdown-arrow">▾</span>
+                        </a>
+                        <ul class="nav__dropdown-menu">
+                            <li><a href="cnc-routing.html">CNC Routing & Machining</a></li>
+                            <li><a href="electrical-components.html">Electrical Components</a></li>
+                            <li><a href="custom-fabrication.html">Custom Fabrication</a></li>
+                        </ul>
+                    </li>
+                    <!-- <li class="nav__item nav__dropdown">
+                        <a href="industries.html" class="nav__link">
+                            Industries <span class="dropdown-arrow">▾</span>
+                        </a>
+                        <ul class="nav__dropdown-menu">
+                            <li><a href="data-centers.html">Data Centers</a></li>
+                            <li><a href="electrical-equipment.html">Electrical Equipment</a></li>
+                            <li><a href="industrial.html">Industrial Manufacturing</a></li>
+                        </ul>
+                    </li> -->
+                    <li class="nav__item">
+                        <a href="materials.html" class="nav__link">Materials</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="quality.html" class="nav__link">Quality</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="about.html" class="nav__link">About</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="contact.html" class="nav__link">Contact</a>
+                    </li>
                 </ul>
-                <div class="nav__close" id="nav-close"><i class="close-icon">✕</i></div>
+                <div class="nav__close" id="nav-close">
+                    <i class="close-icon">✕</i>
+                </div>
             </div>
+
             <div class="nav__actions">
                 <a href="quote.html" class="btn btn--primary">Request Quote</a>
                 <div class="nav__toggle" id="nav-toggle">
@@ -35,8 +70,8 @@
     <main class="main">
         <section class="page-header">
             <div class="container">
-                <h1 class="page-header__title">CNC Routing & Machining</h1>
-                <p class="page-header__subtitle">Large-scale precision cutting for complex geometries</p>
+                <h1 class="page-header__title">CNC Routing for Electrical Insulation Materials</h1>
+                <p class="page-header__subtitle">Specialized equipment for dusty fiberglass, G-10/FR-4, and GPO materials up to 4'×8'</p>
             </div>
         </section>
         <section class="section">
@@ -46,7 +81,7 @@
                 </div>
 
                 <div class="intro-section">
-                    <p>Our advanced CNC router handles complex geometries on large-scale parts with precision and efficiency. Ideal for dusty composites, fiberglass, plastics, and electrical insulation materials that aren't suited for traditional machining centers.</p>
+                    <p><strong>Most machine shops avoid electrical insulation materials due to abrasive tooling wear and hazardous dust.</strong> Our CNC router is specifically configured with dust collection systems, specialized tooling, and optimized speeds/feeds for G-10, FR-4, GPO-3, and fiberglass laminates. Large 4'×8' capacity handles switchgear panels, busbar supports, and data center components that won't fit in traditional mills.</p>
                 </div>
 
                 <div class="content-section">
